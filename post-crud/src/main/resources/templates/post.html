@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Post</title>
+    <!-- Bootstrap CSS -->
+    <link href="../static/css/bootstrap.css" rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" type="text/css" href="static/style.css" th:href="@{/style.css}">
+    <script src="https://kit.fontawesome.com/f0b56f6b49.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <a class="go-home" th:href="@{/post}">Ir a Home <i class="fas fa-home"></i></a>
+        <div class="header-container">
+            <h1>Blog AlkemyLabs</h1>
+        </div>
+        <div class="post-info">
+            <h2 class="titulo" th:text="${post.titulo}"></h2>
+            <div class="post-img">
+                <img th:src="${post.imagen}" />
+            </div>
+            <label>Categoria: </label>
+            <p class="categoria" th:text="${post.categoria}"></p>
+            <label>Contenido:</label>
+            <p class="contenido" th:text="${post.contenido}"></p>
+            <label>Fecha de Creacion:</label>
+            <p class="fecha" th:text="${post.fechaDeCreacion}"></p>
+        </div>
+        <div class="edit-options">
+            <a class="btn" th:href="@{/post/delete/{id}(id=${post.id})}">Eliminar <i class="fas fa-trash"></i> </a>
+            <a class="btn" th:href="@{/post/update/{id}(id=${post.id})}">Editar <i class="fas fa-pencil-alt"></i></a>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

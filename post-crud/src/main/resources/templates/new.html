@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Post</title>
+    <!-- Bootstrap CSS -->
+    <link href="../static/css/bootstrap.css" rel="stylesheet" th:href="@{/css/bootstrap.css}">
+    <link rel="stylesheet" type="text/css" href="static/style.css" th:href="@{/style.css}">
+    <script src="https://kit.fontawesome.com/f0b56f6b49.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <a class="go-home" th:href="@{/post}">Ir a Home <i class="fas fa-home"></i></a>
+        <div class="header-container">
+            <h1>Blog AlkemyLabs</h1>
+        </div>
+        <form action="#" th:action="@{/post/add}" th:object="${post}" method="post">
+            <div class="form-group">
+                <label for="titulo">Titulo</label> <input type="text" class="form-control" id="titulo"
+                    th:field="*{titulo}" name="titulo" required>
+            </div>
+            <div class="form-group">
+                <label for="contenido">Contenido</label> <input type="text" class="form-control" id="contenido"
+                    th:field="*{contenido}" name="contenido" required>
+            </div>
+
+            <div class="form-group">
+                <label for="nombre">Categoria</label> <input type="text" class="form-control" id="categoria"
+                    th:field="*{categoria}" name="categoria">
+            </div>
+
+            <div class="form-group">
+                <label for="nombre">Imagen</label> <input type="text" class="form-control" id="imagen"
+                    th:field="*{imagen}" name="imagen">
+            </div>
+
+
+            <button type="submit" class="btn btn-success">Guardar Post</button>
+        </form>
+    </div>
+</body>
+
+</html>
