@@ -30,11 +30,13 @@ public class PostController {
         return "new";
     }
 
-    @PostMapping("/post/add")
+     @PostMapping("/post/add")
     public String addPost(@Valid Post post, BindingResult result, Model model) {
-        boolean isOk = postServiceImp.newPost(post) != null;
-        model.addAttribute("isOk", isOk);
-        return "index";
+        if (result.hasErrors()) {
+            return "new";
+        }
+        postServiceImp.newPost(post);
+        return "redirect:/post";
     }
 
     @GetMapping("/post/{id}")
