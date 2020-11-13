@@ -1,15 +1,6 @@
 body {
-  background: #141e30; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #182b41,
-    #141e30
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #121c27,
-    #141e30
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-color: #0b0b0b;
+  width: 100%;
   margin: auto;
 }
 
@@ -20,4 +11,133 @@ body {
   flex-direction: column;
   align-items: center;
   color: white;
+}
+
+.header-container {
+  text-align: center;
+  margin: 3rem;
+}
+.header-container a {
+  color: #52c0f7;
+}
+
+h1 {
+  color: white;
+  font-family: fantasy;
+  font-weight: 400;
+  font-size: 5em;
+}
+
+h2 {
+  color: #52c0f7;
+  font-size: 1.8em;
+  font-family: cursive;
+  font-weight: 200;
+  text-align: center;
+}
+
+.container .post {
+  position: relative;
+  overflow: hidden;
+  width: 300px;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #d0d3d4;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+
+.container .post img {
+  position: relative;
+  top: -15px;
+  left: -15px;
+  width: 310px;
+  height: 250px;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  -webkit-clip-path: polygon(0 100%, 0 0, 100% 0, 100% 70%);
+  clip-path: polygon(0 100%, 0 0, 100% 0, 100% 70%);
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+.container .post img:hover {
+  -webkit-clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
+  clip-path: polygon(0 100%, 0 0, 100% 0, 100% 100%);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.container .post h2 {
+  text-align: center;
+  color: rgb(22, 21, 21);
+  font-size: 1.5em;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 600;
+}
+
+.container .post .categoria {
+  text-align: left;
+  font-size: 1em;
+  color: #52c0f7;
+  overflow: hidden;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 400;
+}
+
+.container .post .fecha {
+  text-align: left;
+  color: rgb(22, 21, 21);
+  font-size: 0.8em;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 400;
+}
+
+.edit-options .btn {
+  font-size: 11px;
+  font-weight: bold;
+  background-color: #52c0f7;
+  border: solid 1px #52c0f7;
+  float: right;
+  padding: 10px;
+  border-radius: 20px;
+  bottom: 10px;
+  right: 10px;
+  color: #0b0b0b;
+  cursor: pointer;
+  overflow: hidden;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  margin: 5px;
+}
+
+.post-img img {
+  width: 450px;
+}
+
+.go-home {
+  margin: 2rem;
+  color: white;
+  width: 100%;
+  font-size: 1.2em;
+}
+
+.post-info {
+  font-size: 1.2rem;
+  text-align: left;
+}
+
+.post-info label {
+  color: #3f89ad;
+  font-weight: 400;
+  margin: 0 auto;
+}
+
+.btn-primary {
+  background-color: #52c0f7;
+  border: solid 1px #52c0f7;
+}
+
+.notfound-container {
+  text-align: center;
 }
