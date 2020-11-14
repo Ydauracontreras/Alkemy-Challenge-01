@@ -11,7 +11,6 @@ import ar.alkemy.com.postcrud.services.commons.GenericService;
 
 @Service
 public class PostServiceImp extends GenericService<Post> implements PostService {
-
     public PostRepository repo() {
         return (PostRepository) repository;
     }
@@ -55,6 +54,7 @@ public class PostServiceImp extends GenericService<Post> implements PostService 
         postO.setContenido(postN.getContenido());
         postO.setImagen(postN.getImagen());
         postO.setTitulo(postN.getTitulo());
+        postO.setFechaDeCreacion(new Date());
         update(postO);
         return true;
     }

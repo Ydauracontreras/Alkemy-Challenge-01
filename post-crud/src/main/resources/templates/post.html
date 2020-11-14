@@ -20,7 +20,7 @@
         <div class="post-info">
             <h2 class="titulo" th:text="${post.titulo}"></h2>
             <div class="post-img">
-                <img th:src="${post.imagen}" />
+            <img th:src="@{/img/{imagen}(imagen=${post.imagen})}" />
             </div>
             <label>Categoria: </label>
             <p class="categoria" th:text="${post.categoria}"></p>

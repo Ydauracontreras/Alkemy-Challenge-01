@@ -30,7 +30,7 @@ public class PostController {
         return "new";
     }
 
-     @PostMapping("/post/add")
+    @PostMapping("/post/add")
     public String addPost(@Valid Post post, BindingResult result, Model model) {
         if (result.hasErrors()) {
             return "new";
