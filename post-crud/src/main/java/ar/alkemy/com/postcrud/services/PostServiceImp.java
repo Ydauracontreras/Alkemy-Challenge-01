@@ -52,7 +52,9 @@ public class PostServiceImp extends GenericService<Post> implements PostService 
         Post postO = findById(id);
         postO.setCategoria(postN.getCategoria());
         postO.setContenido(postN.getContenido());
-        postO.setImagen(postN.getImagen());
+        if (postN.getImagen() != "") {
+            postO.setImagen(postN.getImagen());
+        }
         postO.setTitulo(postN.getTitulo());
         postO.setFechaDeCreacion(new Date());
         update(postO);
